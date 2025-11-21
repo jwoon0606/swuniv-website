@@ -43,6 +43,7 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  padding-top: 30px;
 }
 
 .header__left {
@@ -81,7 +82,31 @@ body {
   font-size: 17px;
   font-weight: 500;
   padding: 12px 0;
+  position: relative;
+  display: block;
 }
+
+/* ----- 메뉴 밑줄 관련 코드 ----- */
+.main-menu .main-link {
+  border-bottom: 2px solid transparent;
+  padding-bottom: 10px;
+}
+
+.main-menu li:hover .main-link {
+  color: #09316b;
+  border-bottom: 2px solid #09316b;
+}
+
+.main-menu li.active .main-link {
+  color: #09316b;
+  border-bottom: 2px solid #09316b;
+}
+
+.main-menu li.active a {
+  color: #09316b;
+  border-bottom: 2px solid #09316b;
+}
+/* -------------------------- */
 
 .main-menu li a {
   padding: 12px 0;
@@ -98,21 +123,21 @@ body {
 
 /* dropdown */
 .mega-dropdown {
-  display: none;
+  visibility: hidden;
   position: absolute;
   top: 100%;
   left: 50%;
   transform: translateX(-50%);
-
-  width: 100%;
+  min-width: 120px;
   background: white;
-  padding: 30px 0 40px;
+  padding: 30px 20px 40px;
+  z-index: 10;
+  display: flex;
+  flex-direction: column;
+}
 
-  justify-content: center;
-  gap: 80px;
-
-  box-shadow: none;
-  border: none;
+.main-menu li {
+  position: relative;
 }
 
 /* hover 관련 */
@@ -124,15 +149,29 @@ body {
   display: flex;
   flex-direction: column;
   text-align: center;
+  padding: 0 10px;
 }
 
 .menu-column h4 {
   display: none;
 }
 
-.menu-column a {
+.mega-dropdown .menu-column a {
   padding: 6px 0;
   color: black;
   text-decoration: none;
   font-weight: 400;
+  line-height: 2.0;
+  white-space: nowrap;
+}
+
+/* 메뉴 hover 관련 */
+.main-menu li:hover .mega-dropdown {
+  opacity: 1;
+  visibility: visible;
+}
+
+.mega-dropdown .menu-column a:hover {
+  color: #09316b;
+  font-weight: 500;
 }

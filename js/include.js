@@ -1,8 +1,9 @@
-async function loadIncludes() {
-  const includeTargets = document.querySelectorAll('[data-include]');
+document.addEventListener("DOMContentLoaded", async () => {
+  const includeTargets = document.querySelectorAll("[data-include]");
 
   for (let el of includeTargets) {
-    const file = el.getAttribute('data-include');
+    const file = el.getAttribute("data-include");
+
     try {
       const response = await fetch(file);
       const html = await response.text();
@@ -11,6 +12,4 @@ async function loadIncludes() {
       console.error("Include load error:", file, err);
     }
   }
-}
-
-window.addEventListener('DOMContentLoaded', loadIncludes);
+});
