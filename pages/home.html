@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <title>한동대학교 SW중심대학</title>
+
+    <link rel="stylesheet" href="/css/header.css">
+    <link rel="stylesheet" href="/css/home.css">
+
+    <script src="/js/include.js" defer></script>
+    <script src="/js/carousel.js" defer></script>
+</head>
+
+<body>
+
+    <div data-include="/components/header.html"></div>
+    <div class="page-layout">
+        <main class="content-area">
+
+            <!-- carousel -->
+            <div class="carousel_wrapper">
+                <!-- imgs -->
+                <div class="carousel">
+                    <img src="../img/carousel/carousel_1.png" alt="carousel_1" class="carousel_img" />
+                    <img src="../img/carousel/carousel_2.png" alt="carousel_2" class="carousel_img" />
+                    <img src="../img/carousel/carousel_3.png" alt="carousel_3" class="carousel_img" />
+                    <img src="../img/carousel/carousel_4.png" alt="carousel_4" class="carousel_img" />
+                </div>
+
+                <!-- prev, next btn -->
+                <img src="../img/carousel/prev_btn.png" alt="prev_btn" class="prev_btn" />
+                <img src="../img/carousel/next_btn.png" alt="next_btn" class="next_btn" />
+
+                <!-- dots -->
+                <div class="dots">
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                </div>
+            </div>
+
+
+            <!-- menu -->
+            <div class="menu-wrapper">
+                <div class="menu-list">
+                    <a href="#" class="menu-card">
+                        <img src="../img/menu/menu_1.png" alt="사업단 소개" class="menu-card-icon">
+                        <p class="menu-card-title">사업단 소개</p>
+                    </a>
+
+                    <a href="#" class="menu-card">
+                        <img src="../img/menu/menu_2.png" alt="SW전공교육" class="menu-card-icon">
+                        <p class="menu-card-title">SW전공교육</p>
+                    </a>
+
+                    <a href="#" class="menu-card">
+                        <img src="../img/menu/menu_3.png" alt="SW융합교육" class="menu-card-icon">
+                        <p class="menu-card-title">SW융합교육</p>
+                    </a>
+
+                    <a href="#" class="menu-card">
+                        <img src="../img/menu/menu_4.png" alt="SW가치확산" class="menu-card-icon">
+                        <p class="menu-card-title">SW가치확산</p>
+                    </a>
+                </div>
+            </div>
+
+        </main>
+    </div>
+    <div data-include="/components/footer.html"></div>
+</body>
+
+</html>
