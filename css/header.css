@@ -52,6 +52,10 @@ body {
   gap: 12px;
 }
 
+.header__logo-link {
+    display: contents;
+}
+
 .header__logo {
   height: 42px;
 }
