@@ -180,3 +180,137 @@ body {
   color: #09316b;
   font-weight: 500;
 }
+
+/* 햄버거 메뉴 버튼 */
+.menu-toggle {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  cursor: pointer;
+  padding: 10px;
+}
+
+.menu-toggle span {
+  width: 25px;
+  height: 3px;
+  background: #09316b;
+  border-radius: 2px;
+  transition: 0.3s;
+}
+
+/* ===== 반응형 (태블릿) ===== */
+@media (max-width: 1024px) {
+  .header__inner {
+    padding: 20px;
+  }
+
+  .main-menu {
+    gap: 40px;
+    padding-right: 20px;
+  }
+
+  .header__title {
+    font-size: 16px;
+  }
+
+  .topbar__nav a {
+    margin-left: 20px;
+    font-size: 12px;
+  }
+}
+
+/* ===== 반응형 (모바일) ===== */
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: flex;
+  }
+
+  .header__inner {
+    padding: 15px 20px;
+    flex-wrap: wrap;
+  }
+
+  .header__left {
+    flex: 1;
+  }
+
+  .header__logo {
+    height: 32px;
+  }
+
+  .header__title {
+    font-size: 14px;
+  }
+
+  .header__nav {
+    width: 100%;
+    order: 3;
+    display: none;
+  }
+
+  .header__nav.active {
+    display: block;
+  }
+
+  .main-menu {
+    flex-direction: column;
+    gap: 0;
+    padding: 0;
+    margin-top: 15px;
+  }
+
+  .main-menu li {
+    border-bottom: 1px solid #eee;
+  }
+
+  .main-menu a {
+    padding: 15px 0;
+  }
+
+  .main-menu .main-link {
+    border-bottom: none;
+    padding-bottom: 15px;
+  }
+
+  .main-menu li:hover .main-link {
+    border-bottom: none;
+  }
+
+  .mega-dropdown {
+    position: static;
+    transform: none;
+    visibility: visible;
+    padding: 0 0 10px 20px;
+    box-shadow: none;
+    display: none;
+  }
+
+  .main-menu li:hover .mega-dropdown,
+  .main-menu li.open .mega-dropdown {
+    display: flex;
+  }
+
+  .menu-column {
+    text-align: left;
+  }
+
+  .mega-dropdown .menu-column a {
+    font-size: 14px;
+    line-height: 1.8;
+  }
+
+  .topbar__inner {
+    justify-content: center;
+  }
+
+  .topbar__nav a {
+    margin: 0 10px;
+    font-size: 11px;
+  }
+
+  .topbar__nav .divider {
+    display: inline;
+    color: white;
+    margin: 0 5px;
+  }
+}
