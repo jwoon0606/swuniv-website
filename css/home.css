@@ -95,3 +95,88 @@ body {
     font-weight: 800;
     color: #002870;
 }
+
+/* ===== 반응형 (태블릿) ===== */
+@media (max-width: 1024px) {
+    .prev_btn {
+        left: 30px;
+    }
+
+    .next_btn {
+        right: 30px;
+    }
+
+    .menu-wrapper {
+        padding: 40px 30px;
+    }
+
+    .menu-list {
+        gap: 30px;
+    }
+
+    .menu-card {
+        padding: 20px 18px 10px;
+    }
+
+    .menu-card-icon {
+        width: 100px;
+    }
+
+    .menu-card-title {
+        font-size: 18px;
+    }
+}
+
+/* ===== 반응형 (모바일) ===== */
+@media (max-width: 768px) {
+    .prev_btn,
+    .next_btn {
+        width: 24px;
+    }
+
+    .prev_btn {
+        left: 15px;
+    }
+
+    .next_btn {
+        right: 15px;
+    }
+
+    .dots {
+        gap: 10px;
+        bottom: 8px;
+    }
+
+    .dot {
+        width: 8px;
+        height: 8px;
+    }
+
+    .menu-wrapper {
+        padding: 30px 15px;
+    }
+
+    .menu-list {
+        flex-direction: column;
+        gap: 20px;
+        max-width: 400px;
+    }
+
+    .menu-card {
+        padding: 20px;
+        display: flex;
+        align-items: center;
+        gap: 20px;
+        text-align: left;
+    }
+
+    .menu-card-icon {
+        width: 60px;
+        flex-shrink: 0;
+    }
+
+    .menu-card-title {
+        font-size: 16px;
+        margin: 0;
+    }
+}
