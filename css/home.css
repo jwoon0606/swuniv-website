@@ -129,6 +129,7 @@ body {
 
 /* ===== 반응형 (모바일) ===== */
 @media (max-width: 768px) {
+
     .prev_btn,
     .next_btn {
         width: 24px;
@@ -156,18 +157,22 @@ body {
         padding: 30px 15px;
     }
 
+    /* 반응형 (모바일) 에서는 2 * 2 형태의 grid로 menu-card를 보여줌 */
     .menu-list {
-        flex-direction: column;
-        gap: 20px;
-        max-width: 400px;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 16px;
+        margin: 0 auto;
     }
 
     .menu-card {
-        padding: 20px;
         display: flex;
+        flex-direction: column;
         align-items: center;
-        gap: 20px;
-        text-align: left;
+        justify-content: center;
+        gap: 10px;
+        text-align: center;
+        padding: 16px 12px;
     }
 
     .menu-card-icon {
